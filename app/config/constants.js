@@ -19,7 +19,7 @@ const defaultConfig = {
   root: path.normalize(__dirname + '/../../..'),
   port: process.env.PORT || 8000,
   ip: process.env.IP || '0.0.0.0',
-  apiPrefix: '/agency', // Could be /api/resource or /api/v2/resource
+  apiPrefix: '/api', // Could be /api/resource or /api/v2/resource
 
   /**
    * MongoDB configuration options
