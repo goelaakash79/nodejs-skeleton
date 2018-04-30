@@ -1,0 +1,67 @@
+{
+  "name": "node-rest-skeleton",
+  "version": "0.0.0",
+  "description": "Service to to manage agencies",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && babel app -d build",
+    "clean": "rm -rf build && mkdir build",
+    "start": "nodemon",
+    "test": "NODE_ENV=test mocha --recursive --reporter spec --compilers js:babel-register tests",
+    "lint": "eslint app",
+    "test:watch": "nodemon --exec 'npm run test' tests",
+    "coverage": "NODE_ENV=test babel-node ./node_modules/.bin/isparta cover _mocha -- --recursive --reporter spec --compilers js:babel-register tests",
+    "validate": "npm run test && npm outdated --depth 0",
+    "doc": "apidoc -i app/ -o app/public/apidoc/"
+  },
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodexpertsdev/nodejs-skeleton.git"
+  },
+  "keywords": [
+    "express",
+    "es6",
+    "rest",
+    "api",
+    "skeleton",
+    "mongo"
+  ],
+  "author": "Sapna Upreti",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nodexpertsdev/nodejs-skeleton.git"
+  },
+  "homepage": "https://github.com/nodexpertsdev/nodejs-skeleton",
+  "dependencies": {
+    "apidoc": "^0.17.6",
+    "async": "^2.6.0",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.4",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.3",
+    "fast-csv": "^2.4.1",
+    "formstream": "^1.1.0",
+    "helmet": "^3.12.0",
+    "method-override": "^2.3.10",
+    "moment": "^2.22.0",
+    "mongoose": "^5.0.14",
+    "winston": "^2.4.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.22.0",
+    "babel-preset-node8": "^1.2.0",
+    "babel-register": "^6.26.0",
+    "chai": "^3.5.0",
+    "chai-http": "^3.0.0",
+    "faker": "^3.1.0",
+    "isparta": "^4.0.0",
+    "mocha": "^3.5.3",
+    "nodemon": "^1.17.3"
+  }
+}

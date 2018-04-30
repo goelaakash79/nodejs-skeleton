@@ -1,0 +1,9 @@
+{
+  "name": "Missionapp Notification API documentation",
+  "version": "1.0.0",
+  "description": "APIs below are used for handling HTTP requests",
+  "template": {
+      "forceLanguage": "en"
+  },
+  "url" : "https://notification.missionapp.io"
+}

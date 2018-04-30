@@ -1,0 +1,13 @@
+{
+  "presets": ["node8"],
+  "plugins": [
+    [
+      "transform-runtime", 
+      "transform-class-properties", {
+      "spec": true,
+      "polyfill": false,
+      "regenerator": true
+      }
+    ]
+  ]
+}

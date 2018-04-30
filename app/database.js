@@ -1,0 +1,20 @@
+import mongoose from 'mongoose';
+import Constants from './config/constants';
+
+// Use native promises
+mongoose.Promise = global.Promise;
+
+// Connect to our mongo database;
+mongoose.connect(Constants.mongo.uri, {
+  // useMongoClient: true,
+  /* other options */
+}, (err) => {
+  if (err) {
+    throw err;
+  }
+  console.log('Mongo DB Successfully connected');
+});
+
+// mongoose.connection.on('error', (err) => {
+//   throw err;
+// });
