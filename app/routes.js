@@ -3,6 +3,8 @@ import {
   } from "express";
   
   import TestController from "./controllers/test.controller";
+  import Auth from "./middleware/auth";
+
   
   const router = new Router();
 
@@ -21,8 +23,8 @@ import {
    *@apiVersion 1.0.0
    */
   router.route('/create')
-  .post(TestController.create)
+  .post(Auth.authUser, TestController.create)
 
 
   export default router;
-  
+ 
